@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="description" content="findTheDot ft John Moon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <script>
+        var xpos = 0;
+        var ypos = 0;
+        var currentPosition = [xpos,ypos];
+
+        function findTheDot(str){
+            var idkLocations = [];
+            for(var i = 0 ; i < str.length; i++){
+                switch(str[i]){
+                    case '?':
+                        idkLocations.push(i);
+                        console.log('? input. X and Y pos: '+ 'x value: ' + xpos +'y value: '+ ypos);
+                        break;
+                    case 'd':
+                        ypos++
+                        console.log('ypos incremented' , ypos);
+                        break;
+                    case 'r':
+                        xpos++
+                        console.log('xpos incremented' , xpos);
+                        break;
+                    case 'u':
+                        ypos--
+                        console.log('y position decremented', ypos);
+                        break;
+                    default:
+                        console.log('Error');
+                }
+                if(xpos < 4){
+                    console.log('str before :'+ str);
+                    str.replace('?' , 'r');
+//       str[idkLocations[0]] = 'r';
+                    console.log('str after :'+ str);
+                }
+                else if(ypos < 4){
+                    console.log('str before :'+ str);
+                    str.replace('?' , 'r');
+//       str[idkLocations[0]] = 'd';
+                    console.log('str after :'+ str);
+                }
+            }console.log('xpos: '+ xpos);
+            console.log('ypos: '+ ypos);
+            console.log('idkLocations: ' + idkLocations);
+
+        }
+
+
+
+        findTheDot('???rrurdr?');
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
