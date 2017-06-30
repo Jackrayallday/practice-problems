@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script>
+        var output = '';
+
+        function romanNum(num){
+            while(num >0){
+                while(num>1000000){
+                    num = num-1000000;
+                    output += '(M-bar)';
+                }
+                while(num>500000){
+                    num = num-500000;
+                    output += '(D-bar)';
+                }
+                while(num>100000){
+                    num = num-100000;
+                    output += '(C-bar)';
+                }
+                while(num>50000){
+                    num = num-50000;
+                    output += '(L-bar)';
+                }
+                while(num>10000){
+                    num = num-10000;
+                    output += '(X-bar)';
+                }
+                while(num>5000){
+                    num = num-5000;
+                    output += '(V-bar)';
+                }
+                while(num>1000){
+                    num = num-1000;
+                    output += 'M';
+                }
+                while(num>=500){
+                    num = num-500;
+                    output += "D";
+                }
+                while(num>=100){
+                    num = num-100;
+                    output += 'C'
+                }
+                while(num>=50){
+                    num = num-50;
+                    output += 'L';
+                }
+                while(num>=10){
+                    num = num-10;
+                    output += 'X';
+                }
+                while(num>=5){
+                    num = num-5;
+                    output += 'V'
+                }
+                while(num>=1){
+                    num = num-1;
+                    output +='I';
+                }
+                return output;
+            }
+        }
+        console.log(romanNum(8322));
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>
